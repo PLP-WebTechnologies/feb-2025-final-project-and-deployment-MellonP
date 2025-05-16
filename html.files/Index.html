@@ -50,25 +50,8 @@
                     <p class="text-center text-muted">Check our most viewed cars</p>
                 </div>
             </div>
-            <div class="row">
-                {% for car in featured_cars %}
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card car-card h-100">
-                            <div class="car-card-img-container">
-                                <img src="{{ car.images[0] }}" class="card-img-top" alt="{{ car.brand }} {{ car.model }}">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
-                                <p class="card-text mb-2">{{ car.year }} • {{ car.type }}</p>
-                                <div class="car-price mb-3">${{ '{:,}'.format(car.price) }}</div>
-                                <a href="{{ url_for('car_detail', car_id=car.id) }}" class="btn btn-outline-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="text-center mt-4">
-                <a href="{{ url_for('cars') }}" class="btn btn-secondary">View All Cars</a>
+        </div>
+        </div>
             </div>
         </section>
 
@@ -93,15 +76,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card bg-transparent border-0 h-100 text-center scroll-fade-in" style="animation-delay: 0.2s;">
-                            <div class="card-body">
-                                <div class="mb-4">
-                                    <i class="fas fa-tags fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="card-title mb-3">Competitive Pricing</h5>
-                                <p class="card-text">Get the best value for your money with our fair and transparent pricing policy.</p>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
@@ -138,7 +112,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="card-text">"I found my dream car at AutoHub. The staff was incredibly helpful and made the whole process smooth and enjoyable."</p>
+                            <p class="card-text">"I found my dream car at Ted's Auto. The staff was incredibly helpful and made the whole process smooth and enjoyable."</p>
                         </div>
                         <div class="card-footer bg-transparent">
                             <div class="d-flex align-items-center">
@@ -188,7 +162,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="card-text">"The customer service at AutoHub is unmatched. They followed up after my purchase to ensure I was happy with my new Tesla Model 3."</p>
+                            <p class="card-text">"The customer service at Ted's Auto is unmatched. They followed up after my purchase to ensure I was happy with my GWM."</p>
                         </div>
                         <div class="card-footer bg-transparent">
                             <div class="d-flex align-items-center">
@@ -197,7 +171,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6 class="mb-0">Emma Wilson</h6>
-                                    <small class="text-muted">Te Owner</small>
+                                    <small class="text-muted">GWM Owner</small>
                                 </div>
                             </div>
                         </div>
@@ -264,6 +238,12 @@
                         <li><i class="fas fa-envelope me-2"></i> dt33singh@outlook.com</li>
                         <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 5:00 PM</li>
                     </ul>
+                </div>
+                <div class="car-brands">
+  <img src="images/logos/gwm-logo-png_seeklogo-536810.png" alt="GWM" width="50">
+  <img src="images/logos/hyundai logo.jpeg" alt="Hyundai" width="50">
+  <img src="images/logos/renault logo.jpeg" alt="Renault" width="50">
+  <img src="images/logos/jetour logo.jpeg" alt="Jetour" width="50">
                 </div>
             </div>
             <hr class="my-4">
