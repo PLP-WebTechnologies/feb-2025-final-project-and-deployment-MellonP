@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoHub - Premium Cars</title>
+    <title>Teds Auto</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,49 +19,10 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('index') }}">
-                <i class="fas fa-car-side me-2"></i>
-                AutoHub
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/cars' %}active{% endif %}" href="{{ url_for('cars') }}">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
-                    </li>
-                </ul>
-                <div class="d-flex position-relative">
-                    <input id="search-input" class="form-control me-2" type="search" placeholder="Search cars..." aria-label="Search">
-                    <div class="search-results"></div>
+            <a class="navbar-brand" href="{{ url_for('index') }}
                 </div>
-            </div>
+            <div>
         </div>
-    </nav>
-
-    <!-- Flash Messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="container mt-3">
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
 
     <!-- Main Content -->
     <main>
@@ -70,8 +31,15 @@
             <div class="hero-content text-center">
                 <h1>Find Your Perfect Ride</h1>
                 <p class="lead">Discover our exclusive collection of premium vehicles</p>
-                <a href="{{ url_for('cars') }}" class="btn btn-primary btn-lg">Explore Cars</a>
+                <button type="button">Explore Cars</a>
             </div>
+
+            <div class="hero-image">
+                <div class="hero-image-container">
+                   <img src="images/favicon image.png" alt="Hero Image" class="favicon__image">
+                </div> 
+                
+
         </section>
 
         <!-- Featured Cars Section -->
@@ -79,7 +47,7 @@
             <div class="row mb-4">
                 <div class="col-12">
                     <h2 class="text-center">Featured Cars</h2>
-                    <p class="text-center text-muted">Check out our most popular models</p>
+                    <p class="text-center text-muted">Check our most viewed cars</p>
                 </div>
             </div>
             <div class="row">
@@ -109,8 +77,8 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h2 class="text-center scroll-fade-in">Why Choose AutoHub</h2>
-                        <p class="text-center text-muted scroll-fade-in">We provide the best car buying experience</p>
+                        <h2 class="text-center scroll-fade-in">Why Choose Teds Auto</h2>
+                        <p class="text-center text-muted scroll-fade-in">Drive Excellence, Experience Prestige!</p>
                     </div>
                 </div>
                 <div class="row">
@@ -179,7 +147,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6 class="mb-0">Sarah Johnson</h6>
-                                    <small class="text-muted">Toyota Camry Owner</small>
+                                    <small class="text-muted">2025 Jetour Dashing Owner</small>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +172,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6 class="mb-0">Michael Davis</h6>
-                                    <small class="text-muted">Honda CR-V Owner</small>
+                                    <small class="text-muted">Renault Kiger Owner</small>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +197,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <h6 class="mb-0">Emma Wilson</h6>
-                                    <small class="text-muted">Tesla Model 3 Owner</small>
+                                    <small class="text-muted">Te Owner</small>
                                 </div>
                             </div>
                         </div>
@@ -244,10 +212,10 @@
                 <h2 class="scroll-fade-in mb-3">Ready to Find Your Dream Car?</h2>
                 <p class="lead text-muted mb-5 scroll-fade-in" style="animation-delay: 0.2s;">Browse our inventory or contact us for personalized assistance</p>
                 <div class="d-flex justify-content-center gap-4 flex-wrap">
-                    <a href="{{ url_for('cars') }}" class="btn btn-primary btn-lg px-5 py-3 scroll-fade-in" style="animation-delay: 0.4s;">
+                    <a href="html.files/cars.html" class="btn btn-primary btn-lg px-5 py-3 scroll-fade-in" style="animation-delay: 0.4s;">
                         <i class="fas fa-car-side me-2"></i>View Inventory
                     </a>
-                    <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary btn-lg px-5 py-3 scroll-fade-in" style="animation-delay: 0.6s;">
+                    <a href="html.files/contact.html" class="btn btn-outline-secondary btn-lg px-5 py-3 scroll-fade-in" style="animation-delay: 0.6s;">
                         <i class="fas fa-envelope me-2"></i>Contact Us
                     </a>
                 </div>
@@ -267,7 +235,7 @@
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab "></i>
                         </a>
                         <a href="#" class="social-link">
                             <i class="fab fa-instagram"></i>
@@ -280,35 +248,27 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-4 footer-links">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('index') }}">Home</a></li>
-                        <li><a href="{{ url_for('cars') }}">Cars</a></li>
-                        <li><a href="{{ url_for('about') }}">About Us</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        <li><a href="html.files/home.html">Home</a></li>
+                        <li><a href="html.files/cars.html">Cars</a></li>
+                        <li><a href="html.files/about.html">About Us</a></li>
+                        <li><a href="html.files/contact.html">Contact</a></li>
+                        <li><a href="html.files/dealer.html">Find a Dealer</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 mb-4 footer-links">
-                    <h5>Car Types</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ url_for('cars', type='Sedan') }}">Sedan</a></li>
-                        <li><a href="{{ url_for('cars', type='SUV') }}">SUV</a></li>
-                        <li><a href="{{ url_for('cars', type='Sports') }}">Sports</a></li>
-                        <li><a href="{{ url_for('cars', type='Electric') }}">Electric</a></li>
-                        <li><a href="{{ url_for('cars', type='Truck') }}">Truck</a></li>
-                    </ul>
-                </div>
+                
                 <div class="col-lg-4 col-md-4 mb-4 footer-links">
-                    <h5>Contact Info</h5>
+                    <h5>Contact</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Auto Drive, Car City, CC 10001</li>
-                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope me-2"></i> info@autohub.com</li>
-                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 7:00 PM</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 2 Hamilton Rd, uMnambithi, 3370, South Africa</li>
+                        <li><i class="fas fa-phone me-2"></i> (+27) 61 755 2820</li>
+                        <li><i class="fas fa-envelope me-2"></i> dt33singh@outlook.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 5:00 PM</li>
                     </ul>
                 </div>
             </div>
             <hr class="my-4">
             <div class="text-center">
-                <p class="mb-0">&copy; 2023 AutoHub. All rights reserved.</p>
+                <p class="mb-0">&copy; 2025 Teds Auto. All rights reserved.</p>
             </div>
         </div>
     </footer>
