@@ -731,7 +731,7 @@ footer {
   .form-control, .form-select {
     padding: 10px;
   }
-        .hero-image {
+  .hero-image {
   max-width: 90%;
   height: auto;
   margin-top: 2rem;
@@ -742,4 +742,16 @@ footer {
 .hero-image.active {
   display: block;
                 }
+.car-description {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.car-price {
+  font-size: 1.4rem;
+  color: #b80000;
+  margin-bottom: 2rem;
+}
 }
