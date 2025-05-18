@@ -731,4 +731,15 @@ footer {
   .form-control, .form-select {
     padding: 10px;
   }
+        .hero-image {
+  max-width: 90%;
+  height: auto;
+  margin-top: 2rem;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.hero-image.active {
+  display: block;
+                }
 }
